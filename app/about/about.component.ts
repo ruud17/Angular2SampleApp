@@ -5,7 +5,7 @@ import {Component} from '@angular/core'
 
 @Component({
   selector:'mistral-about',
-  templateUrl:'app/about/about.html'
+  templateUrl:'app/about/about.component.html'
 })
 
 export class AboutComponent {}

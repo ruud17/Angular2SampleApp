@@ -6,9 +6,9 @@ import {ROUTER_DIRECTIVES} from '@angular/router-deprecated'
 
 @Component({
   selector:'mistral-header',
-  templateUrl:'app/header/header.html',
+  templateUrl:'app/header/header.component.html',
   directives:[ROUTER_DIRECTIVES],
-  styleUrls: ['app/header/header.css']
+  styleUrls: ['app/header/header.component.css']
 })
 
 export class HeaderComponent{}

@@ -5,7 +5,7 @@ import {Component} from '@angular/core'
 
 @Component({
   selector:'mistral-employees',
-  templateUrl:'app/employees/employees.html'
+  templateUrl:'app/employees/employees.component.html'
 })
 
 export class EmployeesComponent {

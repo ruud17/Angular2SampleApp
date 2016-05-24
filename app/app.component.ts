@@ -7,7 +7,7 @@ import {TeamsComponent} from './teams/teams.component'
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app.html',
+  templateUrl: 'app/app.component.html',
   directives:[HeaderComponent,ROUTER_DIRECTIVES],
   providers:[ROUTER_PROVIDERS]
 })
@@ -15,7 +15,8 @@ import {TeamsComponent} from './teams/teams.component'
 @RouteConfig([
   { path:'/about',
     name:'About' ,
-    component:AboutComponent
+    component:AboutComponent,
+    useAsDefault:true
   },
   { path:'/teams',
     name:'Teams' ,
@@ -23,8 +24,7 @@ import {TeamsComponent} from './teams/teams.component'
   },
   { path:'/employees',
     name:'Employees' ,
-    component:EmployeesComponent,
-    useAsDefault:true
+    component:EmployeesComponent
   }
 ])
 
