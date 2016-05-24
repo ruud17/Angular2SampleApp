@@ -3,6 +3,7 @@ import {ROUTER_PROVIDERS,ROUTER_DIRECTIVES,RouteConfig} from '@angular/router-de
 import {AboutComponent} from './about/about.component'
 import {EmployeesComponent} from './employees/employees.component'
 import {HeaderComponent} from './header/header.component'
+import {TeamsComponent} from './teams/teams.component'
 
 @Component({
   selector: 'my-app',
@@ -12,8 +13,19 @@ import {HeaderComponent} from './header/header.component'
 })
 
 @RouteConfig([
-  { path:'/about', name:'About' , component:AboutComponent, useAsDefault:true},
-  { path:'/employees', name:'Employees' , component:EmployeesComponent}
+  { path:'/about',
+    name:'About' ,
+    component:AboutComponent
+  },
+  { path:'/teams',
+    name:'Teams' ,
+    component:TeamsComponent
+  },
+  { path:'/employees',
+    name:'Employees' ,
+    component:EmployeesComponent,
+    useAsDefault:true
+  }
 ])
 
 export class AppComponent { }
