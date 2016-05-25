@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {ROUTER_PROVIDERS,ROUTER_DIRECTIVES,RouteConfig} from '@angular/router-deprecated'
 import {AboutComponent} from './about/about.component'
-import {EmployeesComponent} from './employees/employees.component'
+import {EmployeeComponent} from './employee/employee.component'
 import {HeaderComponent} from './header/header.component'
 
 @Component({
@@ -17,9 +17,9 @@ import {HeaderComponent} from './header/header.component'
     component:AboutComponent,
     useAsDefault:true
   },
-  { path:'/employees',
+  { path:'/employee',
     name:'Employees' ,
-    component:EmployeesComponent
+    component:EmployeeComponent
   }
 ])
 
