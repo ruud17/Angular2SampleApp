@@ -15,7 +15,7 @@ import {EmployeeService} from './employee.service'
 })
 
 export class EmployeeComponent implements OnInit {
-  titles:string = 'Mistral employee:';
+  titles:string = 'Mistral employees:';
   searchEmployee:string = '';
   errorMessage:string;
   newEmployee:IEmployee = {

@@ -8,7 +8,7 @@ import {Observable} from 'rxjs/Observable'
 
 @Injectable()
 export class EmployeeService {
-  private _employeeUrl = "app/api/employees.json";
+  private _employeeUrl = "api/employees.json";
 
   constructor(private _http:Http) {
   }
