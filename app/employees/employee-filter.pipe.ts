@@ -11,9 +11,10 @@ import {IEmployee} from './employee'
 
 export class EmployeePipe implements PipeTransform {
 
-  transform(value:IEmployee[], filter: string):IEmployee[] {
+  transform(value:IEmployee[], filter:string):IEmployee[] {
     filter = filter ? filter.toLocaleLowerCase() : null;
-    return filter ? value.filter((employee: IEmployee) =>
+
+    return filter ? value.filter((employee:IEmployee) =>
     employee.name.toLocaleLowerCase().indexOf(filter) !== -1) : value;
   }
 }
