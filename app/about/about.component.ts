@@ -5,7 +5,10 @@ import {Component} from '@angular/core'
 
 @Component({
   selector:'mistral-about',
-  templateUrl:'app/about/about.component.html'
+  templateUrl:'app/about/about.component.html',
+  styleUrls:['app/about/about.component.css']
 })
 
-export class AboutComponent {}
+export class AboutComponent {
+  mistralImage: string='./images/mistral.jpg'
+}

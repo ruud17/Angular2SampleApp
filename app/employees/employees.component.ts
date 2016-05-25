@@ -33,7 +33,6 @@ export class EmployeesComponent {
     ]
 
   addEmployee(e:IEmployee ) {
-    console.log('e',e);
     this.allEmployees.push(e);
   }
 }
