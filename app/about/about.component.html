@@ -1,4 +1,4 @@
 <div>
   <img [src]="mistralImage" class="image">
-  <mistral-description [cityName]='mistralCity'></mistral-description>
+  <mistral-description [cityName]='mistralCity' (changePicture)='updateImagePath($event)'></mistral-description>
 </div>

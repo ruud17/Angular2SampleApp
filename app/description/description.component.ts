@@ -1,7 +1,7 @@
 /**
  * Created by mehmedju on 25.5.2016.
  */
-import {Component,Input} from '@angular/core'
+import {Component,Input,Output,EventEmitter} from '@angular/core'
 
 @Component({
   selector:'mistral-description',
@@ -11,4 +11,9 @@ import {Component,Input} from '@angular/core'
 
 export class DescriptionComponent{
   @Input() cityName : string;
+  @Output() changePicture: EventEmitter<string> = new EventEmitter<string>();
+
+  onClick(): void{
+    this.changePicture.emit('images/mistral2.jpg');
+  }
 }
