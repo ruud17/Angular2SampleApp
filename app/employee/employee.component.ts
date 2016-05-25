@@ -17,6 +17,7 @@ import {EmployeeService} from './employee.service'
 export class EmployeeComponent implements OnInit {
   titles:string = 'Mistral employee:';
   searchEmployee:string = '';
+  errorMessage:string;
   newEmployee:IEmployee = {
     name: '',
     project: ''
@@ -31,6 +32,10 @@ export class EmployeeComponent implements OnInit {
   }
 
   ngOnInit():void {
-    this.allEmployees = this._employeeService.getEmployees();
+    this._employeeService.getEmployees()
+      .subscribe(
+        employees=> this.allEmployees = employees,
+        error=> this.errorMessage = <any>error
+      );
   }
 }
