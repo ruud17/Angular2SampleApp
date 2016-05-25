@@ -29,6 +29,10 @@ export class EmployeeComponent implements OnInit {
 
   addEmployee(e:IEmployee):void {
     this.allEmployees.push(e);
+    this.newEmployee = {
+      name: '',
+      project: ''
+    };
   }
 
   ngOnInit():void {

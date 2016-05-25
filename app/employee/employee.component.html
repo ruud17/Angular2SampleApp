@@ -8,7 +8,7 @@
       <input type="text" class="form-control" id="exampleInputName" placeholder="Name" [(ngModel)]="newEmployee.name">
     </div>
     <div class="form-group">
-      <label class="sr-only" for="exampleInputProject">Password</label>
+      <label class="sr-only" for="exampleInputProject">Project</label>
       <input type="text" class="form-control" id="exampleInputProject" placeholder="Project"
              [(ngModel)]="newEmployee.project">
     </div>
@@ -16,15 +16,15 @@
   </form>
   <br>
 
-  <table class="table table-bordered  table-hover back" *ngIf='allEmployees.length'>
+  <table class="table tableCustom" *ngIf='allEmployees.length'>
     <thead>
     <tr>
       <th>Name</th>
-      <th>Name</th>
+      <th>Project</th>
     </tr>
     </thead>
     <tbody>
-    <tr class="active" *ngFor="let emp of allEmployees | employeeFilter:searchEmployee">
+    <tr *ngFor="let emp of allEmployees | employeeFilter:searchEmployee">
       <td>{{emp.name}}</td>
       <td>{{emp.project | uppercase}}</td>
     </tr>
