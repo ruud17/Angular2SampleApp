@@ -1,6 +1,9 @@
 <div class="main">
-  <h2>{{titles}}</h2>
-  <input type="text" class="form-control" placeholder="Search employee" [(ngModel)]="searchEmployee" style="width: 150px;">
+  <div>
+    <h3>{{titles}}</h3>
+    <input type="text" class="form-control" placeholder="Search employee" [(ngModel)]="searchEmployee"
+           style="width: 396px;">
+  </div>
   <hr>
   <form class="form-inline">
     <div class="form-group">
@@ -17,7 +20,7 @@
   <br>
 
   <table class="table tableCustom" *ngIf='allEmployees.length'>
-    <thead>
+    <thead style="border-bottom: groove #041E38">
     <tr>
       <th>Name</th>
       <th>Project</th>
