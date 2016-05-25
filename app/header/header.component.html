@@ -2,8 +2,9 @@
   <div class="header-limiter">
     <h1><a href="#">Mistral<span> tech.</span></a></h1>
     <nav>
-      <a [routerLink]="['About']">About</a>
-      <a [routerLink]="['Employees']">Employees</a>
+      <a *ngFor="let item of headerItems" [routerLink]="[item.name]" [ngClass]="{selected: item.selected}"
+         (click)="selectHeaderItem(item)">{{item.name}}</a>
     </nav>
   </div>
 </header>
+

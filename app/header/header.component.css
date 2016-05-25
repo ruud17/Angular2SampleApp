@@ -65,8 +65,8 @@
 
 .header-fixed .header-limiter nav a.selected {
   color: #608bd2;
-  pointer-events: none;
   opacity: 1;
+  text-decoration: underline;
 }
 
 /* Fixed version of the header */
