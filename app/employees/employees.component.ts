@@ -1,38 +1,45 @@
 /**
  * Created by mehmedju on 23.5.2016.
  */
-import {Component} from '@angular/core'
+import {Component,OnInit} from '@angular/core'
 import {IEmployee} from './employee'
+import {EmployeePipe} from './employee-filter.pipe'
 
 @Component({
   selector: 'mistral-employees',
   templateUrl: 'app/employees/employees.component.html',
-  styleUrls: ['app/employees/employee.component.css']
+  styleUrls: ['app/employees/employee.component.css'],
+  pipes:[EmployeePipe]
 })
 
-export class EmployeesComponent {
-  titles:string = 'Mistral employees:'
-  newEmployee: IEmployee={
-    name:'',
-    project:''
+export class EmployeesComponent implements OnInit{
+  titles:string = 'Mistral employees:';
+  searchEmployee:string = '';
+  newEmployee:IEmployee = {
+    name: '',
+    project: ''
   };
-  allEmployees: IEmployee[] =
+  allEmployees:IEmployee[] =
     [
       {
-        name:'Irhad',
-        project:'NCR'
+        name: 'Irhad',
+        project: 'NCR'
       },
       {
-        name:'Semir',
-        project:'ESecuritel'
+        name: 'Semir',
+        project: 'ESecuritel'
       },
       {
-        name:'Nerman',
-        project:'AT&T'
+        name: 'Nerman',
+        project: 'AT&T'
       }
     ]
 
-  addEmployee(e:IEmployee ) {
+  addEmployee(e:IEmployee) : void {
     this.allEmployees.push(e);
+  }
+
+  ngOnInit():void{
+    console.log('initialization employee page');
   }
 }

@@ -3,7 +3,6 @@ import {ROUTER_PROVIDERS,ROUTER_DIRECTIVES,RouteConfig} from '@angular/router-de
 import {AboutComponent} from './about/about.component'
 import {EmployeesComponent} from './employees/employees.component'
 import {HeaderComponent} from './header/header.component'
-import {TeamsComponent} from './teams/teams.component'
 
 @Component({
   selector: 'my-app',
@@ -17,10 +16,6 @@ import {TeamsComponent} from './teams/teams.component'
     name:'About' ,
     component:AboutComponent,
     useAsDefault:true
-  },
-  { path:'/teams',
-    name:'Teams' ,
-    component:TeamsComponent
   },
   { path:'/employees',
     name:'Employees' ,

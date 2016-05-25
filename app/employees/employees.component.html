@@ -1,5 +1,6 @@
 <div class="main">
   <h2>{{titles}}</h2>
+  <input type="text" class="form-control" placeholder="Search employee" [(ngModel)]="searchEmployee" style="width: 150px;">
   <hr>
   <form class="form-inline">
     <div class="form-group">
@@ -8,7 +9,8 @@
     </div>
     <div class="form-group">
       <label class="sr-only" for="exampleInputProject">Password</label>
-      <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" [(ngModel)]="newEmployee.project">
+      <input type="text" class="form-control" id="exampleInputProject" placeholder="Project"
+             [(ngModel)]="newEmployee.project">
     </div>
     <button type="submit" class="btn btn-default" (click)="addEmployee(newEmployee)">Add employee</button>
   </form>
@@ -22,9 +24,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr class="active" *ngFor="let emp of allEmployees">
+    <tr class="active" *ngFor="let emp of allEmployees | employeeFilter:searchEmployee">
       <td>{{emp.name}}</td>
-      <td>{{emp.project}}</td>
+      <td>{{emp.project | uppercase}}</td>
     </tr>
     </tbody>
   </table>
