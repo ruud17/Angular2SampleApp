@@ -1,7 +1,31 @@
-Add Mistral employee:
-<input type="text" maxlength="30" value="">
-<button value="Add"> Add</button>
+<div class="main">
+  <h2>{{titles}}</h2>
+  <hr>
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputName">Name</label>
+      <input type="text" class="form-control" id="exampleInputName" placeholder="Name" [(ngModel)]="newEmployee.name">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputProject">Password</label>
+      <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" [(ngModel)]="newEmployee.project">
+    </div>
+    <button type="submit" class="btn btn-default" (click)="addEmployee(newEmployee)">Add employee</button>
+  </form>
+  <br>
 
-All Mistral employees:
-<p *ngFor="let emp of allEmployees"> {{emp}} </p>
-
+  <table class="table table-bordered  table-hover back" *ngIf='allEmployees.length'>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="active" *ngFor="let emp of allEmployees">
+      <td>{{emp.name}}</td>
+      <td>{{emp.project}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
